@@ -1,24 +1,6 @@
-// Wait for the DOM to finish loading before running the game
-// Get the button elements and add event listeners to them
-
-//document.addEventListener("DOMContentLoaded", function () {
-//    let buttons = document.getElementsByTagName("button");
-
-  //  for (let button of buttons) {
-  //      button.addEventListener("click", function () {
-  //          if (this.getAttribute("data-type") === "submit") {
-  //              alert("You clicked Submit!");
-  //          } else {
- //               let gameType = this.getAttribute("data-type");
-  //              alert(`You clicked ${gameType}`);
- //           }
-  //      });
-  //  }
-//});
-
 const questions = [
   {
-    question: 'Which is the main capitol of Sweden?',
+    question: "Which is the main capitol of Sweden?",
     answers: [
       { text: 'Stockholm', correct: true },
       { text: 'Gotenburg', correct: false },
@@ -27,30 +9,50 @@ const questions = [
     ]
   },
   {
-    question: 'Who is the best YouTuber?',
+    question: "Which is the local currency in Sweden?",
     answers: [
-      { text: 'Web Dev Simplified', correct: true },
-      { text: 'Traversy Media', correct: true },
-      { text: 'Dev Ed', correct: true },
-      { text: 'Fun Fun Function', correct: true }
+      { text: "Euro (EUR)", correct: false },
+      { text: "Swedish Crowns (SEK)", correct: true },
+      { text: "Scandinavian Pound (SCP)", correct: false },
+      { text: "Swish (SWI)", correct: false}
     ]
   },
   {
-    question: 'Is web development fun?',
+    question: "What is the name of the King of Sweden?",
     answers: [
-      { text: 'Kinda', correct: false },
-      { text: 'YES!!!', correct: true },
-      { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false }
+      { text: "Carl IXV Gustaf", correct: false },
+      { text: "Calle", correct: false },
+      { text: "Carl VIX Gustaf", correct: false },
+      { text: "Carl XVI Gustaf", correct: true }
     ]
   },
   {
-    question: 'What is 4 * 2?',
+    question: "What do Swedes do when they meet for a fika?",
     answers: [
-      { text: '6', correct: false },
-      { text: '8', correct: true }
+        { text: "Sports", correct: false },
+        { text: "Handicrafts", correct: false },
+        { text: "Having a coffee and maybe some pastry", correct: true },
+        { text: "Go on cacation", correct: false }
     ]
-  }
+  },
+  {
+    question: "What is Kebnekaise?",
+    answers: [
+      { text: "A foodchain", correct: false },
+      { text: "Swedish national dish", correct: false },
+      { text: "A popular pizza in Sweden", correct: false },
+      { text: "Sweden’s highest mountain", correct: true }
+    ]
+  },
+  {
+    question: " Which one is a popular ABBA hit song?",
+    answers: [
+      { text: "The winter takes it all", correct: false },
+      { text: "Waterloo", correct: true },
+      { text: "The winner bakes it all", correct: false },
+      { text: "Volvo-Vouz", correct: false }
+    ]
+  },
 ]
 
 const questionElement = document.getElementById('question');
