@@ -1,0 +1,88 @@
+/* Google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;1,300&family=Roboto:wght@300&display=swap');
+
+/* Asterisk wildcard*/
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+body {
+    font-family: Lato, sans-serif;
+    font-weight: 300;
+    background-color: rgb(216, 215, 176);
+    color: #445361;
+    text-align: center;
+
+
+}
+
+header {
+    text-align: center;
+    font-size: x-large;
+    margin-top: 50px;
+  
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: 65px;
+}
+
+
+
+.playground {
+    background-color: #ffefa7;
+    box-sizing: border-box;
+    width: 85%;
+    height: 65vh;
+    max-height: 450px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.btn {
+    background: white;
+    color: black;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #222;
+    color: white;
+    transition: all 0.3s;
+}
+
+#next-btn {
+    background: #195ece;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    padding: 10px;
+    border: 0;
+    margin: 50px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+}
+
+
+.scoreground {
+    margin: 5px auto;
+    width: 60%;
+    font-size: 20px;
+
+}
+
