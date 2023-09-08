@@ -21,9 +21,9 @@ const questions = [
     question: 'Which is the main capitol of Sweden?',
     answers: [
       { text: 'Stockholm', correct: true },
-      { text: 'Gotenburg', correct: false }
-      { text: 'Copenhagen', correct: false }
-      { text: 'Milano', correct: false }
+      { text: 'Gotenburg', correct: false },
+      { text: 'Copenhagen', correct: false },
+      { text: 'Milano', correct: false },
     ]
   },
   {
@@ -69,6 +69,7 @@ function startQuiz() {
   }
 
   function showQuestion() {
+    resetState()
     let currentQuestion = questions[currentQuestionIndex];
     let questionNo = currentQuestionIndex + 1;
     questionElement.innerHTML = questionNo + ". " + currentQuestion. question;
@@ -81,7 +82,10 @@ function startQuiz() {
       });
   }
 
-  startQuiz()
+  function resetState() {
+    nextButton.style.display = "none";
+    while (answerButtons.firstChild) 
+      answerButtons.removeChild(answerButtons.firstChild)
+    }
 
-
-
+    startQuiz()
