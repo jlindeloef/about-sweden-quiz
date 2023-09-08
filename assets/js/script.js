@@ -108,4 +108,28 @@ function startQuiz() {
     })
     nextButton.style.display = "block";
   }
+
+  nextButton.addEventListener("click", ()=>{
+    if(currentQuestionIndex < questions.length){
+        handleNextbutton();
+    }else{
+        startQuiz();
+    }
+    
+    function showScore(){
+        resetState();
+        questionElement.innerHTML = "Your score ${score} out of ${questions.length}!";
+        nextButton.innerHTML = "Play again";
+        nextButton.style.display = "block";
+    }
+    function handleNextbutton(){
+        currentQuestionIndex++;
+        if(currentQuestionIndex < questions.length) {
+            showQuestion();
+        }else{
+            showScore();
+        }
+    }
+
+  })
     startQuiz()
