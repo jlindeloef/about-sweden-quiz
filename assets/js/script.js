@@ -120,8 +120,8 @@ function startQuiz() {
     
     function showScore(){
         resetState();
-        questionElement.innerHTML = "Your score ${score} out of ${questions.length}!";
-        nextButton.innerHTML = "Play again";
+        questionElement.innerHTML = `Your score ${score} out of ${questions.length}!`;
+        nextButton.innerHTML = "Play Again";
         nextButton.style.display = "block";
     }
     function handleNextbutton(){

@@ -9,10 +9,10 @@
 }
 
 body {
-    font-family: Lato, sans-serif;
+    font-family: oswald, sans-serif;
     font-weight: 300;
     background-color: rgb(216, 215, 176);
-    color: #445361;
+    color: black;
     text-align: center;
 
 
@@ -44,17 +44,19 @@ header {
     padding: 1%;
     margin-top: 20px;
     margin-bottom: 60px;
+    border-radius: 20px;
 }
 
 .btn {
     background: white;
     color: black;
     font-weight: 500;
+    font-size: large;
     width: 100%;
     border: 1px solid #222;
     padding: 10px;
     margin: 10px 0;
-    text-align: left;
+    text-align: center;
     border-radius: 4px;
     cursor: pointer;
 }
