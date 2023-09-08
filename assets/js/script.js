@@ -1,27 +1,29 @@
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
 
-document.addEventListener("DOMContentLoaded", function () {
-    let buttons = document.getElementsByTagName("button");
+//document.addEventListener("DOMContentLoaded", function () {
+//    let buttons = document.getElementsByTagName("button");
 
-    for (let button of buttons) {
-        button.addEventListener("click", function () {
-            if (this.getAttribute("data-type") === "submit") {
-                alert("You clicked Submit!");
-            } else {
-                let gameType = this.getAttribute("data-type");
-                alert(`You clicked ${gameType}`);
-            }
-        });
-    }
-});
+  //  for (let button of buttons) {
+  //      button.addEventListener("click", function () {
+  //          if (this.getAttribute("data-type") === "submit") {
+  //              alert("You clicked Submit!");
+  //          } else {
+ //               let gameType = this.getAttribute("data-type");
+  //              alert(`You clicked ${gameType}`);
+ //           }
+  //      });
+  //  }
+//});
 
 const questions = [
   {
-    question: 'What is 2 + 2?',
+    question: 'Which is the main capitol of Sweden?',
     answers: [
-      { text: '4', correct: true },
-      { text: '22', correct: false }
+      { text: 'Stockholm', correct: true },
+      { text: 'Gotenburg', correct: false }
+      { text: 'Copenhagen', correct: false }
+      { text: 'Milano', correct: false }
     ]
   },
   {
@@ -52,8 +54,34 @@ const questions = [
 ]
 
 const questionElement = document.getElementById('question');
-const answerButtonsElement = document.getElementById('answerbuttons');
+const answerButtons = document.getElementById('answerbuttons');
 const nextButton = document.getElementById('next-btn');
 
 let currentQuestionIndex = 0;
 let score = 0;
+
+//starting the game
+function startQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    nextButton.innerHTML = "Next";
+    showQuestion();
+  }
+
+  function showQuestion() {
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNo + ". " + currentQuestion. question;
+
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        answerButtons.appendChild(button);
+      });
+  }
+
+  startQuiz()
+
+
+
