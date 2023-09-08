@@ -91,13 +91,21 @@ function startQuiz() {
     while (answerButtons.firstChild) 
       answerButtons.removeChild(answerButtons.firstChild)
     }
-  function selectAnswer() {
+  function selectAnswer(e) {
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
     if(isCorrect) {
-        selectedBtn.classlist.add("correct");
-    }else{
-        selectedBtn.classlist.add(incorrect);
+        selectedBtn.classList.add('correct');
+        score++;
+    }  else  {
+        selectedBtn.classList.add('incorrect');
     }
+    Array.from(answerButtons.children).forEach(button => {
+        if(button.dataset.correct === "true") {
+        button.classList.add("correct");
+        }
+        button.disabled = true;
+    })
+    nextButton.style.display = "block";
   }
     startQuiz()
