@@ -58,9 +58,12 @@ const questions = [
 const questionElement = document.getElementById('question');
 const answerButtons = document.getElementById('answerbuttons');
 const nextButton = document.getElementById('next-btn');
+const startButton = document.getElementById('start-btn');
 
+startButton.addEventListener('click', startQuiz);
 let currentQuestionIndex = 0;
 let score = 0;
+
 
 //starting the game
 function startQuiz() {

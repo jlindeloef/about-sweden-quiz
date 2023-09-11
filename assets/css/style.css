@@ -86,6 +86,10 @@ header {
 display: none;
 }
 
+.hide {
+    display: none;
+}
+
 
 .scoreground {
     margin: 5px auto;
