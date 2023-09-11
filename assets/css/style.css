@@ -22,15 +22,14 @@ header {
     text-align: center;
     font-size: x-large;
     margin-top: 50px;
-  
+    margin-bottom: 80px;
 }
 
 .title {
     text-transform: uppercase;
     font-size: 65px;
+   
 }
-
-
 
 .playground {
     background-color: #ffefa7;
