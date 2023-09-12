@@ -60,20 +60,24 @@ const answerButtons = document.getElementById('answerbuttons');
 const nextButton = document.getElementById('next-btn');
 const startButton = document.getElementById('start-btn');
 
-startButton.addEventListener('click', startQuiz);
+
 let currentQuestionIndex = 0;
 let score = 0;
 
-startButton.addEventListener("click", () => {
-    questionElement.classList.add("hide");
-    answerButtons.classList.add("hide");
-    initial();
-});
 //hide quiz and display start screen
 window.onload = () => {
+    questionElement.classList.add("hide");
+    answerButtons.classList.add("hide");
+};
+startButton.addEventListener("click", () => {
     questionElement.classList.remove("hide");
     answerButtons.classList.remove("hide");
-};
+    startButton.classList.add("hide");
+    startQuiz();
+});
+
+
+
 //starting the game
 function startQuiz() {
     currentQuestionIndex = 0;
