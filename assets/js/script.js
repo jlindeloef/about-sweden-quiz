@@ -59,7 +59,7 @@ const questionElement = document.getElementById('question');
 const answerButtons = document.getElementById('answerbuttons');
 const nextButton = document.getElementById('next-btn');
 const startButton = document.getElementById('start-btn');
-
+const startText = document.getElementById('starttext');
 
 let currentQuestionIndex = 0;
 let score = 0;
@@ -73,6 +73,7 @@ startButton.addEventListener("click", () => {
     questionElement.classList.remove("hide");
     answerButtons.classList.remove("hide");
     startButton.classList.add("hide");
+    startText.classList.add("hide");
     startQuiz();
 });
 
