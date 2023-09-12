@@ -64,7 +64,16 @@ startButton.addEventListener('click', startQuiz);
 let currentQuestionIndex = 0;
 let score = 0;
 
-
+startButton.addEventListener("click", () => {
+    questionElement.classList.add("hide");
+    answerButtons.classList.add("hide");
+    initial();
+});
+//hide quiz and display start screen
+window.onload = () => {
+    questionElement.classList.remove("hide");
+    answerButtons.classList.remove("hide");
+};
 //starting the game
 function startQuiz() {
     currentQuestionIndex = 0;

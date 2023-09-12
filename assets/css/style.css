@@ -14,8 +14,21 @@ body {
     background-color: rgb(216, 215, 176);
     color: black;
     text-align: center;
+}
 
-
+#startbox {
+    background-color: #ffefa7;
+        box-sizing: border-box;
+        width: 85%;
+        height: 65vh;
+        max-height: 450px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1%;
+        margin-top: 20px;
+        margin-bottom: 60px;
+        border-radius: 20px;
 }
 
 header {
