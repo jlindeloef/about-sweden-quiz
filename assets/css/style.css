@@ -46,6 +46,10 @@ header {
     box-shadow: 5px 10px;
 }
 
+#starttext {
+    line-height: 1.3;
+}
+
 .btn {
     background: white;
     color: black;
