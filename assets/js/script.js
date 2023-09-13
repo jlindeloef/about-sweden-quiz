@@ -88,7 +88,7 @@ const questions = [
             { text: "Ingvar Kamprad", correct: false },
             { text: "Tage Erlander", correct: false }
         ]
-    }, 
+    },
     {
         question: "Swedish is an official language in which other country besides Sweden?",
         answers: [
@@ -101,85 +101,84 @@ const questions = [
     {
         question: "What is the name of the biggest lake in Sweden?",
         answers: [
-            { text: "Vänern", correct: true},
-            { text: "Mälaren", correct: false},
-            { text: "Vättern", correct: false},
-            { text: "Ringsjön", correct: false}
+            { text: "Vänern", correct: true },
+            { text: "Mälaren", correct: false },
+            { text: "Vättern", correct: false },
+            { text: "Ringsjön", correct: false }
         ]
     },
     {
         question: "What is the name of the famous fotballplayer whos was born in Malmö",
         answers: [
-            { text: "Henrik Larsson", correct: false},
-            { text: "Zlatan Ibrahimović", correct: true},
-            { text: "Eric Zaade", correct: false},
-            { text: "Björn Borg", correct: false}
+            { text: "Henrik Larsson", correct: false },
+            { text: "Zlatan Ibrahimović", correct: true },
+            { text: "Eric Zaade", correct: false },
+            { text: "Björn Borg", correct: false }
         ]
     },
     {
         question: "Which Nordic countries have land borders with Sweden?",
         answers: [
-            { text: "Norway and Finland", correct: true},
-            { text: "Iceland and Norway", correct: false},
-            { text: "Denmark and Finland", correct: false},
-            { text: "Denmark and Norway", correct: false}
+            { text: "Norway and Finland", correct: true },
+            { text: "Iceland and Norway", correct: false },
+            { text: "Denmark and Finland", correct: false },
+            { text: "Denmark and Norway", correct: false }
         ]
     },
     {
         question: "Which dramatist is considered Sweden's greatest literary figure?",
         answers: [
-            { text: "Ibsen", correct: false},
-            { text: "Chekhov", correct: false},
-            { text: "Shakespeare", correct: false},
-            { text: "Strindberg", correct: true}
+            { text: "Ibsen", correct: false },
+            { text: "Chekhov", correct: false },
+            { text: "Shakespeare", correct: false },
+            { text: "Strindberg", correct: true }
         ]
     },
     {
         question: "Who is the current Prime Minister of Sweden (2023)?",
         answers: [
-            { text: "Magdalena Andersson", correct: false},
-            { text: "Annie Lööf", correct: false},
-            { text: "Ulf Kristersson", correct: true},
-            { text: " August Strindberg", correct: false}
+            { text: "Magdalena Andersson", correct: false },
+            { text: "Annie Lööf", correct: false },
+            { text: "Ulf Kristersson", correct: true },
+            { text: " August Strindberg", correct: false }
         ]
     },
     {
         question: "On which date does Sweden celebrate its National Day?",
         answers: [
-            { text: "December 6", correct: false},
-            { text: "June 6", correct: true},
-            { text: "July 6", correct: false},
-            { text: "June 24", correct: false}
+            { text: "December 6", correct: false },
+            { text: "June 6", correct: true },
+            { text: "July 6", correct: false },
+            { text: "June 24", correct: false }
         ]
     },
     {
         question: "Sweden ruled over the land of Finland until which year?",
         answers: [
-            { text: "1809", correct: true},
-            { text: "1666", correct: false},
-            { text: "1918", correct: false},
-            { text: "1989", correct: false}
+            { text: "1809", correct: true },
+            { text: "1666", correct: false },
+            { text: "1918", correct: false },
+            { text: "1989", correct: false }
         ]
     },
     {
         question: "In which year did Sweden join the European Union?",
         answers: [
-            { text: "1993", correct: false},
-            { text: "2001", correct: false},
-            { text: "1995", correct: true},
-            { text: "2003", correct: false}
+            { text: "1993", correct: false },
+            { text: "2001", correct: false },
+            { text: "1995", correct: true },
+            { text: "2003", correct: false }
         ]
     },
     {
         question: "Sweden has never been involved in a war since...?",
         answers: [
-            { text: "1814", correct: true},
-            { text: "1666", correct: false},
-            { text: "1914", correct: false},
-            { text: "1939", correct: false}
+            { text: "1814", correct: true },
+            { text: "1666", correct: false },
+            { text: "1914", correct: false },
+            { text: "1939", correct: false }
         ]
     },
-    
 ];
 
 const questionElement = document.getElementById('question');
@@ -191,7 +190,7 @@ const startText = document.getElementById('starttext');
 let shuffledQuestions, currentQuestionIndex;
 
 
-//hide quiz and display start screen
+/*hide quiz and display*/
 window.onload = () => {
     questionElement.classList.add("hide");
     answerButtons.classList.add("hide");
@@ -204,16 +203,15 @@ startButton.addEventListener("click", () => {
     startQuiz();
 });
 
-
-//starting the game
+/*starting the game*/
 function startQuiz() {
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
+    shuffledQuestions = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Next";
     showQuestion();
 }
-//Show questions and reset to next question
+/*Show questions and reset to next question*/
 function showQuestion() {
     resetState();
     let currentQuestion = questions[currentQuestionIndex];
@@ -232,11 +230,14 @@ function showQuestion() {
     });
 }
 
+/*When question displays*/
 function resetState() {
     nextButton.style.display = "none";
     while (answerButtons.firstChild)
-        answerButtons.removeChild(answerButtons.firstChild);
+    answerButtons.removeChild(answerButtons.firstChild);
 }
+
+/*What happens when you choose an answer*/
 function selectAnswer(e) {
     const selectedBtn = e.target;
     const isCorrect = selectedBtn.dataset.correct === "true";
@@ -254,7 +255,7 @@ function selectAnswer(e) {
     });
     nextButton.style.display = "block";
 }
-
+/*Next button*/
 nextButton.addEventListener("click", () => {
     if (currentQuestionIndex < questions.length) {
         handleNextbutton();
@@ -262,6 +263,7 @@ nextButton.addEventListener("click", () => {
         startQuiz();
     }
 
+/*Scoreboard*/
     function showScore() {
         resetState();
         questionElement.innerHTML = `Your score ${score} out of ${questions.length}!`;
