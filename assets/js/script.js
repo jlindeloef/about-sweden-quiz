@@ -61,8 +61,8 @@ const nextButton = document.getElementById('next-btn');
 const startButton = document.getElementById('start-btn');
 const startText = document.getElementById('starttext');
 
-let currentQuestionIndex = 0;
-let score = 0;
+let shuffledQuestions, currentQuestionIndex;
+
 
 //hide quiz and display start screen
 window.onload = () => {
@@ -78,9 +78,9 @@ startButton.addEventListener("click", () => {
 });
 
 
-
 //starting the game
 function startQuiz() {
+    shuffledQuestions = questions.sort(() => Math.random() - .5)
     currentQuestionIndex = 0;
     score = 0;
     nextButton.innerHTML = "Next";
