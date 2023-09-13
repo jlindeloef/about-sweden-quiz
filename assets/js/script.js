@@ -63,7 +63,7 @@ const questions = [
         ]
     },
     {
-        question: "What is the Swedish world-famous furniture making company called?",
+        question: "The Swedish world-famous furniture company is called...?",
         answers: [
             { text: "IKEA", correct: true },
             { text: "Nike", correct: false },
@@ -72,7 +72,7 @@ const questions = [
         ]
     },
     {
-        question: " Who was the Swede who was the Secretary General of the United Nations from 1953 to 1961?",
+        question: "A Swede who was the Secretary General of the UN from 1953-1961?",
         answers: [
             { text: "Olof Palme", correct: false },
             { text: "Dag Hammarskjöld", correct: true },
@@ -89,15 +89,6 @@ const questions = [
             { text: "Tage Erlander", correct: false }
         ]
     }, 
-    {
-        question: "What is the name of the gulf that separates a great part of Sweden from Finland?",
-        answers: [
-            { text: "The mexican gulf", correct: false },
-            { text: "The finish gulf", correct: false },
-            { text: "Gulf of Bothnia", correct: true },
-            { text: "Botniska sjön", correct: false }
-        ]
-    },
     {
         question: "Swedish is an official language in which other country besides Sweden?",
         answers: [
@@ -129,9 +120,9 @@ const questions = [
         question: "Which Nordic countries have land borders with Sweden?",
         answers: [
             { text: "Norway and Finland", correct: true},
-            { text: "Iceland, Norway and Finland", correct: false},
-            { text: "Germany, Denmark and Finland", correct: false},
-            { text: "Austria, Denmark and Norway", correct: false}
+            { text: "Iceland and Norway", correct: false},
+            { text: "Denmark and Finland", correct: false},
+            { text: "Denmark and Norway", correct: false}
         ]
     },
     {
@@ -144,7 +135,7 @@ const questions = [
         ]
     },
     {
-        question: "Who is the current Prime Minister of Sweden who was elected in 2022?",
+        question: "Who is the current Prime Minister of Sweden (2023)?",
         answers: [
             { text: "Magdalena Andersson", correct: false},
             { text: "Annie Lööf", correct: false},
