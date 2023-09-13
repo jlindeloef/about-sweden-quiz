@@ -59,7 +59,7 @@ header {
 
 #starttext {
     line-height: 1.3;
-    font-size: large;
+    font-size: 20px;
 }
 
 h3 {
@@ -82,7 +82,7 @@ h3 {
 }
 
 .btn:hover:not([disabled]) {
-    background: #195ece;
+    background: #457bd1;
     color: white;
     transition: all 0.3s;
 }
@@ -92,7 +92,7 @@ h3 {
 }
 
 #next-btn, #start-btn {
-    background: #195ece;
+    background: #457bd1;
     color: #fff;
     font-weight: 500;
     font-size: x-large;
@@ -103,8 +103,9 @@ h3 {
     border-radius: 4px;
     cursor: pointer;
     box-shadow: none;
-   
+    border: 1px solid #222;
 }
+
 #next-btn {
 display: none;
 }
