@@ -108,7 +108,7 @@ question: "What is the name of the biggest lake in Sweden?",
 ]
 },
 {
-question: "What is the name of the famous fotballplayer whos was born in Malmö",
+question: "What is the name of the famous fotballplayer whos was born in Malmö?",
   answers: [
   {text: "Henrik Larsson", correct: false },
   {text: "Zlatan Ibrahimović", correct: true },
