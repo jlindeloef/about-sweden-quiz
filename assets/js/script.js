@@ -12,9 +12,9 @@ question: "Which is the capital of Sweden?",
 question: "Which is the local currency in Sweden?",
   answers: [
   {text: "Euro (EUR)", correct: false },
-  {text: "Swedish Crowns (SEK)", correct: true },
-  {text: "Scandinavian Pound (SCP)", correct: false },
-  {text: "Swish (SWI)", correct: false }
+  {text: "Swedish Crowns", correct: true },
+  {text: "Scandinavian Pound", correct: false },
+  {text: "Swish", correct: false }
 ]
 },
 {
@@ -135,7 +135,7 @@ question: "Which dramatist is considered Sweden's greatest literary figure?",
 ]
 },
 {
-question: "Who is the current Prime Minister of Sweden (2023)?",
+question: "Who is the Prime Minister of Sweden (2023)?",
   answers: [
   {text: "Magdalena Andersson", correct: false },
   {text: "Annie Lööf", correct: false },
