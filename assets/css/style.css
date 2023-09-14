@@ -90,20 +90,33 @@ h3 {
 }
 
 #next-btn,
-#start-btn, #end-button {
+#start-btn {
     background: #457bd1;
     color: #fff;
     font-weight: 500;
     font-size: x-large;
     width: 150px;
     padding: 10px;
-    border: 0;
-    margin: 50px auto 0;
+    margin: 15px auto 0;
     border-radius: 4px;
     cursor: pointer;
     box-shadow: none;
     border: 1px solid #222;
 }
+
+#end-btn {
+        background: #457bd1;
+        color: #fff;
+        font-weight: 500;
+        font-size: x-large;
+        width: 150px;
+        padding: 10px;
+        margin: 15px auto 0;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: none;
+        border: 1px solid #222;
+    }
 
 .hide {
     display: none;

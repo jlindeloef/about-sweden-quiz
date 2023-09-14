@@ -202,6 +202,7 @@ startButton.addEventListener("click", () => {
   answerButtons.classList.remove("hide");
   startButton.classList.add("hide");
   startText.classList.add("hide");
+  
   startQuiz();
 });
 
@@ -235,6 +236,8 @@ currentQuestion.answers.forEach(answer => {
 /*When question displays*/
 function resetState() {
   nextButton.style.display = "none";
+  endButton.style.display = "none";
+  nextButton.innerHTML = "Next";
   while (answerButtons.firstChild)
   answerButtons.removeChild(answerButtons.firstChild);
 }
@@ -257,6 +260,7 @@ Array.from(answerButtons.children).forEach(button => {
   button.disabled = true;
   });
   nextButton.style.display = "block";
+  endButton.style.display = "block";
 }
 
 /*Next button*/
@@ -266,6 +270,10 @@ nextButton.addEventListener("click", () => {
   } else {
   startQuiz();
 }
+
+endButton.addEventListener("click", () => {
+  showScore()
+});
 
 /*Scoreboard*/
 function showScore() {
