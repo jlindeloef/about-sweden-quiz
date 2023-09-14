@@ -186,6 +186,7 @@ const answerButtons = document.getElementById('answerbuttons');
 const nextButton = document.getElementById('next-btn');
 const startButton = document.getElementById('start-btn');
 const startText = document.getElementById('starttext');
+const endButton = document.getElementById('end-btn');
 
 let shuffledQuestions, currentQuestionIndex;
 

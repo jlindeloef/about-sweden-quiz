@@ -90,7 +90,7 @@ h3 {
 }
 
 #next-btn,
-#start-btn {
+#start-btn, #end-button {
     background: #457bd1;
     color: #fff;
     font-weight: 500;
