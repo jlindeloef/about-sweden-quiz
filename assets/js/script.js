@@ -282,7 +282,7 @@ nextButton.addEventListener("click", () => {
     handleNextbutton();
 } else {
     startQuiz();
-  }
+   }
 });
 
 
@@ -304,7 +304,7 @@ function showScore() {
 
   resetState();
   questionElement.innerHTML = `Your score ${score} out of ${questions.length}!`;
-  nextButton.innerHTML = "Continue Game";
+  nextButton.innerHTML = "Back in Game";
   nextButton.style.display = "block";
   resetButton.style.display = "block";
 }
@@ -317,7 +317,6 @@ function handleNextbutton() {
 } else {
     showScore();
   }
-};
-
+}
 
 startQuiz();
