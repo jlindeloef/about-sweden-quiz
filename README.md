@@ -6,7 +6,9 @@ About Sweden Quiz is a quiz for those who want to show their knowledge about Swe
 
 Johan Lindelöf
 
- ![The Responsive image](https://github.com/jlindeloef/about-sweden-quiz/blob/main/readme-images/responsive.png)
+![The Responsive image](https://github.com/jlindeloef/about-sweden-quiz/blob/main/readme-images/responsive.png)
+
+[About Sweden Quiz](https://jlindeloef.github.io/about-sweden-quiz/)
 
  ## About the website
 ### Project planning
@@ -65,22 +67,22 @@ The quiz has threesections:
 
 + #### Start
   - The start of the game has instruction of the quiz and a start button.
-    
-  ![Start of the quiz](https://github.com/jlindeloef/about-sweden-quiz/blob/main/readme-images/playgroundandstart.png)
+
+ ![Start of the quiz](https://github.com/jlindeloef/about-sweden-quiz/blob/main/readme-images/playgroundandstart.png)
 
 + #### Playground
   - After pressing the start button a question displays.
  
-  ![Question](https://github.com/jlindeloef/about-sweden-quiz/blob/main/readme-images/questionappear.png)
+![Question](https://github.com/jlindeloef/about-sweden-quiz/blob/main/readme-images/questionappear.png)
 
   - User select an answer and if it turns green it is correct:
   
-  ![Right answer](https://github.com/jlindeloef/about-sweden-quiz/blob/main/readme-images/rightanswer.png)
+![Right answer](https://github.com/jlindeloef/about-sweden-quiz/blob/main/readme-images/rightanswer.png)
   
   - And if it turns red it is incorrect.
   - The right answer will turn green:
  
-  ![Wrong answer](https://github.com/jlindeloef/about-sweden-quiz/blob/main/readme-images/wronganswer.png)
+![Wrong answer](https://github.com/jlindeloef/about-sweden-quiz/blob/main/readme-images/wronganswer.png)
 
   - As soon as the user selects their answer, a "Next"-button and a "End Game"-Button will display.
   - The user can now decide to continue to the next question or end the game.
@@ -91,7 +93,7 @@ The quiz has threesections:
   - When you answered all the questions or end the game the user will be directed to the scoreboard:
   - Here the user can see their score and decide to reset the quiz or if ended the game, return to the questions.
   
-  ![Scoreboard](https://github.com/jlindeloef/about-sweden-quiz/blob/main/readme-images/scoreboard.png)
+![Scoreboard](https://github.com/jlindeloef/about-sweden-quiz/blob/main/readme-images/scoreboard.png)
 
 ### Features to Implement
 Further I would like to make the scores out of answered questions when ended the game.
