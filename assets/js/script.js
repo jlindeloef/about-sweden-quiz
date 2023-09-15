@@ -196,6 +196,7 @@ let shuffledQuestions, currentQuestionIndex;
 window.onload = () => {
   questionElement.classList.add("hide");
   answerButtons.classList.add("hide");
+  resetButton.classList.add("hide");
 };
 
 startButton.addEventListener("click", () => {
@@ -245,6 +246,7 @@ function resetState() {
 
   nextButton.style.display = "none";
   endButton.style.display = "none";
+  resetButton.style.display = "none";
   nextButton.innerHTML = "Next";
   while (answerButtons.firstChild)
     answerButtons.removeChild(answerButtons.firstChild);
@@ -256,20 +258,20 @@ function selectAnswer(e) {
   const selectedBtn = e.target;
   const isCorrect = selectedBtn.dataset.correct === "true";
   if (isCorrect) {
-      selectedBtn.classList.add('correct');
-        score++;
+    selectedBtn.classList.add('correct');
+    score++;
   } else {
-      selectedBtn.classList.add('incorrect');
+    selectedBtn.classList.add('incorrect');
   }
-      Array.from(answerButtons.children).forEach(button => {
+  Array.from(answerButtons.children).forEach(button => {
 
-  if (button.dataset.correct === "true") {
+    if (button.dataset.correct === "true") {
       button.classList.add("correct");
     }
-      button.disabled = true;
+    button.disabled = true;
   });
-      nextButton.style.display = "block";
-      endButton.style.display = "block";
+  nextButton.style.display = "block";
+  endButton.style.display = "block";
 }
 
 
@@ -278,7 +280,7 @@ nextButton.addEventListener("click", () => {
 
   if (currentQuestionIndex < questions.length) {
     handleNextbutton();
-} else {
+  } else {
     startQuiz();
   }
 });
@@ -287,7 +289,13 @@ nextButton.addEventListener("click", () => {
 /*End Game Button*/
 endButton.addEventListener("click", () => {
 
-    showScore();
+  showScore();
+});
+
+/*Reset Button*/
+resetButton.addEventListener("click", () => {
+
+  startQuiz();
 });
 
 
@@ -296,17 +304,17 @@ function showScore() {
 
   resetState();
   questionElement.innerHTML = `Your score ${score} out of ${questions.length}!`;
-  nextButton.innerHTML = "Return to game";
+  nextButton.innerHTML = "Continue Game";
   nextButton.style.display = "block";
+  resetButton.style.display = "block";
 }
 
-
 function handleNextbutton() {
-  
+
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
     showQuestion();
-} else {
+  } else {
     showScore();
   }
 };
