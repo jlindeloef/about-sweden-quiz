@@ -83,8 +83,37 @@ The quiz has threesections:
   ![Wrong answer](https://github.com/jlindeloef/about-sweden-quiz/blob/main/readme-images/wronganswer.png)
 
   - As soon as the user selects their answer, a "Next"-button and a "End Game"-Button will display.
-  - The user can now deicide to continue to the next question or end the game.
+  - The user can now decide to continue to the next question or end the game.
+  
 ![Next and End button](https://github.com/jlindeloef/about-sweden-quiz/blob/main/readme-images/nextendbutton.png)
+
++ #### Scoreboard
+  - When you answered all the questions or end the game the user will be directed to the scoreboard:
+  - Here the user can see their score and decide to reset the quiz or if ended the game, return to the questions.
+  
+  ![Scoreboard](https://github.com/jlindeloef/about-sweden-quiz/blob/main/readme-images/scoreboard.png)
+
+### Features to Implement
+Further I would like to make the scores out of answered questions when ended the game.
+
+## Testing
++ I tested the site, and it works in different web browsers: Chrome, Firefox, and Microsoft Edge.
++ On mobile devices, I tested the quiz on a Samsung Galaxy A13 with the Samsung browser and an iPhone SE with the Safari browser.
++ I confirmed that the site is responsive and functions on different screen sizes using the devtools device toolbar.
++ I confirmed that the quiz, start, playground and scoreboard are readable and easy to understand.
+
+### Validator Testing
++ HTML No errors were returned when passing through the official W3C validator.
++ CSS No errors were found when passing through the official (Jigsaw) validator.
++ Javascript No errors were found when passing through JSHint validator.
+
+### Testing using Google Lighthouse:
+I used Google Lighthouse via devtools to assess the website.
+
+![Lighthouse](https://github.com/jlindeloef/about-sweden-quiz/blob/main/readme-images/lighthouse.png)
+
+
+
 
 
 
