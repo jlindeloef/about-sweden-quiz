@@ -215,7 +215,6 @@ function startQuiz() {
   score = 0;
   nextButton.innerHTML = "Next";
   showQuestion();
-
 }
 
 
@@ -237,9 +236,7 @@ function showQuestion() {
     }
     button.addEventListener("click", selectAnswer);
   });
-
 }
-
 
 /*When question displays*/
 function resetState() {
@@ -274,7 +271,6 @@ function selectAnswer(e) {
       endButton.style.display = "block";
 }
 
-
 /*Next button*/
 nextButton.addEventListener("click", () => {
 
@@ -297,7 +293,6 @@ resetButton.addEventListener("click", () => {
 
     startQuiz();
 });
-
 
 /*Scoreboard*/
 function showScore() {
