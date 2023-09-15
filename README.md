@@ -10,6 +10,9 @@ Johan Lindelöf
 
 [About Sweden Quiz](https://jlindeloef.github.io/about-sweden-quiz/)
 
+[Github Repository](https://github.com/jlindeloef/about-sweden-quiz)
+
+
  ## About the website
 ### Project planning
 This is my first time coding javascript so first I needed to look at different quizes both of how to code and what I wanted in my quiz. I looked at youtube and looked through some code I could find on the internet that matches what I wanted. I also brought with me knowledge from my diploma course in coding. I wanted a quiz that had questions in different categories and easy for the user to maneuver through.  
