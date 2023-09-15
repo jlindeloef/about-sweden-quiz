@@ -112,6 +112,34 @@ I used Google Lighthouse via devtools to assess the website.
 
 ![Lighthouse](https://github.com/jlindeloef/about-sweden-quiz/blob/main/readme-images/lighthouse.png)
 
+  ### Bugs
++ Solved bugs
+  - The "Next"-button did`nt want to change function in scorebord to "Reset", so I made a new button that hasthat function.
++ Unsolved bugs
+  - After answer every question both "Back in Game" and "Reset"-button has the same function. I did`nt did not have the time to sort it out by the timeschedule I`m on.
+
+   ## Deployment
++ The site was deployed to Git Hub pages using the following steps:
++ After logging into GitHub I located my repository for my Portfolio Project 2.
++ I then clicked the "Settings" button at the top of my repository
++ Under General, navigate to Code and Automation and select "Pages".
++ In the Build and Deployment section for Source, select 'Deploy from a branch' from the drop-down list.
++ For Branch, select "main" from the drop-down list and "/root" in the next bar and Save.
++ On the top of the page, the link to the complete website is provided.
++ The deployed site will update automatically upon new commits to the master branch.
+
+  ## Credits
+**Code:** Some code parts were taken from W3Schools (https://www.w3schools.com/), Stack Overflow (https://stackoverflow.com/) modified for the purpose of my website. 
+Some code used in "Love Maths" and "Love Running Challenge" was used and changed for my quiz. The questions were mainly from funtrivia.com (https://www.funtrivia.com/en/Geography/Sweden-3858.html).
+
+### Acknowledgements
+My mentor Medale Oluwafemi for guidance and inspiration and reviewing.
+The questions were mainly from funtrivia.com (https://www.funtrivia.com/en/Geography/Sweden-3858.html).
+
+
+
+
+
 
 
 
