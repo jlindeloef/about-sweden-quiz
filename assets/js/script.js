@@ -187,6 +187,7 @@ const nextButton = document.getElementById('next-btn');
 const startButton = document.getElementById('start-btn');
 const startText = document.getElementById('starttext');
 const endButton = document.getElementById('end-btn');
+const resetButton = document.getElementById('reset-btn');
 
 let shuffledQuestions, currentQuestionIndex;
 
@@ -202,20 +203,24 @@ startButton.addEventListener("click", () => {
   answerButtons.classList.remove("hide");
   startButton.classList.add("hide");
   startText.classList.add("hide");
-
   startQuiz();
 });
 
 /*starting the game*/
 function startQuiz() {
+
   shuffledQuestions = questions.sort(() => Math.random() - .5);
   currentQuestionIndex = 0;
   score = 0;
   nextButton.innerHTML = "Next";
   showQuestion();
+
 }
+
+
 /*Show questions and reset to next question*/
 function showQuestion() {
+
   resetState();
   let currentQuestion = questions[currentQuestionIndex];
   let questionNo = currentQuestionIndex + 1;
@@ -231,10 +236,13 @@ function showQuestion() {
     }
     button.addEventListener("click", selectAnswer);
   });
-};
+
+}
+
 
 /*When question displays*/
 function resetState() {
+
   nextButton.style.display = "none";
   endButton.style.display = "none";
   nextButton.innerHTML = "Next";
@@ -244,53 +252,61 @@ function resetState() {
 
 /*What happens when you choose an answer*/
 function selectAnswer(e) {
+
   const selectedBtn = e.target;
   const isCorrect = selectedBtn.dataset.correct === "true";
   if (isCorrect) {
-    selectedBtn.classList.add('correct');
-    score++;
+      selectedBtn.classList.add('correct');
+        score++;
   } else {
-    selectedBtn.classList.add('incorrect');
+      selectedBtn.classList.add('incorrect');
   }
+      Array.from(answerButtons.children).forEach(button => {
 
-  Array.from(answerButtons.children).forEach(button => {
-    if (button.dataset.correct === "true") {
+  if (button.dataset.correct === "true") {
       button.classList.add("correct");
     }
-    button.disabled = true;
+      button.disabled = true;
   });
-  nextButton.style.display = "block";
-  endButton.style.display = "block";
+      nextButton.style.display = "block";
+      endButton.style.display = "block";
 }
+
 
 /*Next button*/
 nextButton.addEventListener("click", () => {
+
   if (currentQuestionIndex < questions.length) {
     handleNextbutton();
-  } else {
+} else {
     startQuiz();
   }
 });
+
+
 /*End Game Button*/
 endButton.addEventListener("click", () => {
-  if (currentQuestionIndex < questions.length) {
+
     showScore();
-  }
 });
+
 
 /*Scoreboard*/
 function showScore() {
+
   resetState();
   questionElement.innerHTML = `Your score ${score} out of ${questions.length}!`;
   nextButton.innerHTML = "Return to game";
   nextButton.style.display = "block";
-};
+}
+
 
 function handleNextbutton() {
+  
   currentQuestionIndex++;
   if (currentQuestionIndex < questions.length) {
     showQuestion();
-  } else {
+} else {
     showScore();
   }
 };
