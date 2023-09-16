@@ -190,9 +190,12 @@ const endButton = document.getElementById("end-btn");
 const resetButton = document.getElementById("reset-btn");
 
 let shuffledQuestions, currentQuestionIndex;
+let score = 0;
 
 
-/*hide quiz and display*/
+/**
+ * hide quiz and display
+ */
 window.onload = () => {
   questionElement.classList.add("hide");
   answerButtons.classList.add("hide");
@@ -207,7 +210,9 @@ startButton.addEventListener("click", () => {
   startQuiz();
 });
 
-/*starting the game*/
+/**
+ *starting the game
+ */
 function startQuiz() {
 
   shuffledQuestions = questions.sort(() => Math.random() - .5);
@@ -218,7 +223,9 @@ function startQuiz() {
 }
 
 
-/*Show questions and reset to next question*/
+/**
+ * Show questions and reset to next question
+*/
 function showQuestion() {
 
   resetState();
@@ -238,7 +245,9 @@ function showQuestion() {
   });
 }
 
-/*When question displays*/
+/**
+ * When question displays
+*/
 function resetState() {
 
   nextButton.style.display = "none";
@@ -249,7 +258,9 @@ function resetState() {
     answerButtons.removeChild(answerButtons.firstChild);
 }
 
-/*What happens when you choose an answer*/
+/**
+ * What happens when you choose an answer
+ */
 function selectAnswer(e) {
 
   const selectedBtn = e.target;
@@ -271,30 +282,38 @@ function selectAnswer(e) {
       endButton.style.display = "block";
 }
 
-/*Next button*/
+/**
+ * Next button
+ */
 nextButton.addEventListener("click", () => {
 
   if (currentQuestionIndex < questions.length) {
     handleNextbutton();
 } else {
-    startQuiz();
+    hideNextbutton();
    }
 });
 
 
-/*End Game Button*/
+/**
+ * End Game Button
+ */
 endButton.addEventListener("click", () => {
 
     showScore();
 });
 
-/*Reset Button*/
+/**
+ * Reset Button
+*/
 resetButton.addEventListener("click", () => {
 
     startQuiz();
 });
 
-/*Scoreboard*/
+/**
+ * Scoreboard
+*/
 function showScore() {
 
   resetState();
@@ -313,5 +332,13 @@ function handleNextbutton() {
     showScore();
   }
 }
+
+function hideNextbutton() {
+  
+  nextButton.style.display = "none";
+  
+}
+
+
 
 startQuiz();
