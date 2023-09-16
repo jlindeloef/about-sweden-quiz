@@ -62,7 +62,7 @@ The quiz has threesections:
 
 ### Existing Features
 
-+ #### Logo
++ #### Th title
   - The title of the quiz with a subtitle. It is displayed on an image of the swedish flag and the sky. With yellow text and black shadow.
 
 ![Title](https://github.com/jlindeloef/about-sweden-quiz/blob/main/readme-images/header.png)
@@ -93,8 +93,10 @@ The quiz has threesections:
 ![Next and End button](https://github.com/jlindeloef/about-sweden-quiz/blob/main/readme-images/nextendbutton.png)
 
 + #### Scoreboard
-  - When you answered all the questions or end the game the user will be directed to the scoreboard:
-  - Here the user can see their score and decide to reset the quiz or if ended the game, return to the questions.
+  - When you answered all the questions or end the game the user will be directed to the scoreboard.
+  - If the user ends the game without answering all the questions, the scoreboard will give the alternative to go back to the game or reset the game.
+  - If the user finishes all the questions, the scoreboard will give the alternative to reset the game and start over.   
+
   
 ![Scoreboard](https://github.com/jlindeloef/about-sweden-quiz/blob/main/readme-images/scoreboard.png)
 
@@ -121,7 +123,7 @@ I used Google Lighthouse via devtools to assess the website.
 + Solved bugs
   - The "Next"-button did`nt want to change function in scorebord to "Reset", so I made a new button that hasthat function.
 + Unsolved bugs
-  - After answer every question both "Back in Game" and "Reset"-button has the same function. I did`nt did not have the time to sort it out by the timeschedule I`m on.
+  - No unsolved bugs.
 
    ## Deployment
 + The site was deployed to Git Hub pages using the following steps:
