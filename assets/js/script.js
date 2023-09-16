@@ -181,13 +181,13 @@ const questions = [
   },
 ];
 
-const questionElement = document.getElementById('question');
-const answerButtons = document.getElementById('answerbuttons');
-const nextButton = document.getElementById('next-btn');
-const startButton = document.getElementById('start-btn');
-const startText = document.getElementById('starttext');
-const endButton = document.getElementById('end-btn');
-const resetButton = document.getElementById('reset-btn');
+const questionElement = document.getElementById("question");
+const answerButtons = document.getElementById("answerbuttons");
+const nextButton = document.getElementById("next-btn");
+const startButton = document.getElementById("start-btn");
+const startText = document.getElementById("starttext");
+const endButton = document.getElementById("end-btn");
+const resetButton = document.getElementById("reset-btn");
 
 let shuffledQuestions, currentQuestionIndex;
 
