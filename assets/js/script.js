@@ -192,7 +192,6 @@ const resetButton = document.getElementById("reset-btn");
 let shuffledQuestions, currentQuestionIndex;
 let score = 0;
 
-
 /**
  * hide quiz and display
  */
@@ -221,7 +220,6 @@ function startQuiz() {
   nextButton.innerHTML = "Next";
   showQuestion();
 }
-
 
 /**
  * Show questions and reset to next question
@@ -294,7 +292,6 @@ nextButton.addEventListener("click", () => {
    }
 });
 
-
 /**
  * End Game Button
  */
@@ -307,7 +304,6 @@ endButton.addEventListener("click", () => {
  * Reset Button
 */
 resetButton.addEventListener("click", () => {
-
     startQuiz();
 });
 
